@@ -1,0 +1,532 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPfuMVi90hSq4g89VfgWH7y",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/luizzmartins/BuscaCEP/blob/main/primeiros_exercicios_python\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Aquecendo na programação\n"
+      ],
+      "metadata": {
+        "id": "nBTjUJvToyuO"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "7ctLecL5outn",
+        "outputId": "3264ab81-8ca2-470e-e07d-6c2615d0df2b"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite o primeiro número: 10\n",
+            "Digite o segundo número: 10\n",
+            "Os números são iguais\n"
+          ]
+        }
+      ],
+      "source": [
+        "num_1 = int(input(\"Digite o primeiro número: \"))\n",
+        "num_2 = int(input(\"Digite o segundo número: \"))\n",
+        "if num_1 > num_2:\n",
+        "  print(f\"{num_1} é o maior\")\n",
+        "elif num_2 > num_1:\n",
+        "  print(f\"{num_2} é o maior\")\n",
+        "else:\n",
+        "  print(\"Os números são iguais\")"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "percentual = float(input(\"Digite o percentual: \"))\n",
+        "if percentual > 0:\n",
+        "  print(\"Houve crescimento\")\n",
+        "elif percentual < 0:\n",
+        "  print(\"Houve decrescimento\")\n",
+        "else:\n",
+        "  print(\"Não houve variação.\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ggPiOA-_oxlQ",
+        "outputId": "6fdbee5b-155c-49a5-9f62-e4b92d305cd6"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite o percentual: 0\n",
+            "Não houve variação.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "letra = str(input(\"Digite a letra: \"))\n",
+        "if letra == \"a\" or letra == \"e\" or letra == \"i\" or letra == \"o\" or letra == \"u\":\n",
+        "  print(\"É uma vogal\")\n",
+        "else:\n",
+        "  print(\"É uma consoante\")"
+      ],
+      "metadata": {
+        "id": "RN5PzBTcqQXC"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "valor_1 = float(input(\"Valor no primeiro ano: \"))\n",
+        "valor_2 = float(input(\"Valor no segundo ano: \"))\n",
+        "valor_3 = float(input(\"Valor no terceiro ano: \"))\n",
+        "if valor_1 >= valor_2 and valor_1 >= valor_3:\n",
+        "  maior = valor_1\n",
+        "elif valor_2 >= valor_1 and valor_2 >= valor_3:\n",
+        "  maior = valor_2\n",
+        "else:\n",
+        "  maior = valor_3\n",
+        "\n",
+        "if valor_1 <= valor_2 and valor_1 <= valor_3:\n",
+        "  menor = valor_1\n",
+        "elif valor_2 <= valor_1 and valor_2 <= valor_3:\n",
+        "  menor = valor_2\n",
+        "else:\n",
+        "  menor = valor_3\n",
+        "\n",
+        "print(f\"Maior valor: {maior}\")\n",
+        "print(f\"Menor valor: {menor}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "jFmoHGDGoxqM",
+        "outputId": "946f5351-7bc5-4980-a980-fa3dbf260403"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Valor no primeiro ano: 25000\n",
+            "Valor no segundo ano: 33564\n",
+            "Valor no terceiro ano: 30434\n",
+            "Maior valor: 33564.0\n",
+            "Menor valor: 25000.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "produto_1 = float(input(\"Primeiro produto: \"))\n",
+        "produto_2 = float(input(\"Segundo produto: \"))\n",
+        "produto_3 = float(input(\"Terceiro produto: \"))\n",
+        "if produto_1 <= produto_2 and produto_1 <= produto_3:\n",
+        "  mais_barato = produto_1\n",
+        "elif produto_2 <= produto_1 and produto_2 <= produto_3:\n",
+        "  mais_barato = produto_2\n",
+        "else:\n",
+        "  mais_barato = produto_3\n",
+        "\n",
+        "print(f\"Valor mais barato: {mais_barato}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "eanZ-tm5oxvw",
+        "outputId": "836f30eb-2705-4754-c47d-d7693d71f2ac"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Primeiro produto: 10\n",
+            "Segundo produto: 100\n",
+            "Terceiro produto: 5\n",
+            "Valor mais barato: 5.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "num_1 = float(input(\"Primeiro número: \"))\n",
+        "num_2 = float(input(\"Segundo número: \"))\n",
+        "num_3 = float(input(\"Terceiro número: \"))\n",
+        "if num_1 >= num_2 and num_1 >= num_3:\n",
+        "  maior = num_1\n",
+        "elif num_2 >= num_1 and num_2 >=num_3:\n",
+        "  maior = num_2\n",
+        "else:\n",
+        "  maior = num_3\n",
+        "\n",
+        "if num_1 <= num_2 and num_1 <= num_3:\n",
+        "  menor = num_1\n",
+        "elif num_2 <= num_1 and num_2 <= num_3:\n",
+        "  menor = num_2\n",
+        "else:\n",
+        "  menor = num_3\n",
+        "\n",
+        "if num_1 != maior and num_1 != menor:\n",
+        "  meio = num_1\n",
+        "elif num_2 != maior and num_2 != menor:\n",
+        "  meio = num_2\n",
+        "else:\n",
+        "  meio = num_3\n",
+        "\n",
+        "print(maior)\n",
+        "print(meio)\n",
+        "print(menor)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "6oOI0W38oxz7",
+        "outputId": "d3da8a46-1cdc-4762-c883-2533e59cba5d"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Primeiro número: 2\n",
+            "Segundo número: 10\n",
+            "Terceiro número: 5\n",
+            "10.0\n",
+            "5.0\n",
+            "2.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "turno = str(input(\"Digite o seu turno: \"))\n",
+        "if turno == \"dia\":\n",
+        "  print(\"Bom dia!\")\n",
+        "elif turno == \"tarde\":\n",
+        "  print(\"Boa tarde!\")\n",
+        "elif turno == \"noite\":\n",
+        "  print(\"Boa noite!\")\n",
+        "else:\n",
+        "  print(\"Valor inválido!\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "QCsfdI_9ox4z",
+        "outputId": "b63b0841-7e30-47d3-8ed7-4eb07c1704bf"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite o seu turno: skfgm\n",
+            "Valor inválido!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "numero = int(input(\"Digite o número: \"))\n",
+        "if numero % 2 == 0:\n",
+        "  print(f\"{numero} é par\")\n",
+        "else:\n",
+        "  print(f\"{numero} é ímpar\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "UlBfuUDXox8-",
+        "outputId": "55c75484-94dc-4f69-c719-12a3db549d90"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite o número: 11\n",
+            "11 é ímpar\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "numero = float(input(\"Digite o número: \"))\n",
+        "if numero == int(numero):\n",
+        "  print(\"O número é inteiro\")\n",
+        "else:\n",
+        "  print(\"O número é decimal\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "43OAwC-WoyB3",
+        "outputId": "ac32bd84-e0d6-4999-a8d4-73e64bb46bbb"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite o número: 5\n",
+            "O número é inteiro\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Momento dos projetos"
+      ],
+      "metadata": {
+        "id": "NjiPTtje-76g"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "num_1 = float(input(\"Digite o primeiro número: \"))\n",
+        "num_2 = float(input(\"Digite o segundo número: \"))\n",
+        "operacao = str(input(\"Operação: \"))\n",
+        "if operacao == \"+\":\n",
+        "  resultado = num_1 + num_2\n",
+        "elif operacao == \"-\":\n",
+        "  resultado = num_1 - num_2\n",
+        "elif operacao == \"/\":\n",
+        "  resultado = num_1 / num_2\n",
+        "elif operacao == \"*\":\n",
+        "  resultado = num_1 * num_2\n",
+        "else:\n",
+        "  print(\"Operação inválida.\")\n",
+        "  exit()\n",
+        "\n",
+        "print(f\"Resultado: {resultado}\")\n",
+        "\n",
+        "if resultado == int(resultado):\n",
+        "  if resultado % 2 == 0:\n",
+        "    print(f\"É par\")\n",
+        "  else:\n",
+        "    print(f\"É ímpar\")\n",
+        "else:\n",
+        "  print(\"O resultado é decimal, portanto não pode ser par nem ímpar\")\n",
+        "\n",
+        "if resultado > 0:\n",
+        "  print(\"Positivo\")\n",
+        "elif resultado < 0:\n",
+        "  print(\"Negativo\")\n",
+        "else:\n",
+        "  print(\"Neutro\")\n",
+        "\n",
+        "if resultado == int(resultado):\n",
+        "  print(\"Número inteiro\")\n",
+        "else:\n",
+        "  print(\"Número decimal\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "LwgBSAZ6-_x-",
+        "outputId": "4e79aa1f-fffa-4572-8002-77dac8de0d67"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite o primeiro número: 10\n",
+            "Digite o segundo número: 14.5\n",
+            "Operação: -\n",
+            "Resultado: -4.5\n",
+            "O resultado é decimal, portanto não pode ser par nem ímpar\n",
+            "Negativo\n",
+            "Número decimal\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lado_1 = float(input(\"Digite o tamanho do primeiro lado: \"))\n",
+        "lado_2 = float(input(\"Digite o tamanho do segundo lado: \"))\n",
+        "lado_3 = float(input(\"Digite o tamanho do terceiro lado: \"))\n",
+        "if (lado_1 + lado_2 > lado_3) and (lado_1 + lado_3 > lado_2) and (lado_2 + lado_3 > lado_1):\n",
+        "  print(\"Os valores podem formar um triângulo!\")\n",
+        "  if lado_1 == lado_2 and lado_1 == lado_3 and lado_2 == lado_3:\n",
+        "    print(\"É um Triângulo Equilátero.\")\n",
+        "  elif lado_1 == lado_2 or lado_1 == lado_3 or lado_2 == lado_3:\n",
+        "    print(\"É um Triângulo Isóceles\")\n",
+        "  else:\n",
+        "    print(\"É um Triângulo Escaleno\")\n",
+        "else:\n",
+        "  print(\"Os valores não podem formar um triângulo.\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "WmrpJX1QF1m_",
+        "outputId": "91e8a6b7-08c2-4dfc-a55f-917cd3e699a2"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite o tamanho do primeiro lado: 3\n",
+            "Digite o tamanho do segundo lado: 4\n",
+            "Digite o tamanho do terceiro lado: 5\n",
+            "Os valores podem formar um triângulo!\n",
+            "É um Triângulo Escaleno\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "litros = float(input(\"Digite a quantidade em litros: \"))\n",
+        "combustivel = str(input(\"Digite o tipo de combustível: \"))\n",
+        "if combustivel == \"etanol\":\n",
+        "  valor_litro = 1.70\n",
+        "  if litros <= 15:\n",
+        "    desconto = valor_litro * litros * 0.02\n",
+        "  else:\n",
+        "    desconto = valor_litro * litros * 0.04\n",
+        "elif combustivel == \"diesel\":\n",
+        "    valor_litro = 2.00\n",
+        "    if litros <= 15:\n",
+        "      desconto = valor_litro * litros * 0.03\n",
+        "    else:\n",
+        "      desconto = valor_litro * litros * 0.05\n",
+        "else:\n",
+        "  print(\"Tipo de combustível inválido.\")\n",
+        "  exit()\n",
+        "\n",
+        "valor_total = valor_litro * litros\n",
+        "valor_com_desconto = valor_total - desconto\n",
+        "\n",
+        "print(f\"Total com desconto: {valor_com_desconto}\")\n"
+      ],
+      "metadata": {
+        "id": "4cQ5qqZC-_6X",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "468241f8-6730-4d89-e720-01576a763d64"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite a quantidade em litros: 5\n",
+            "Digite o tipo de combustível: etanol\n",
+            "Total com desconto: 8.33\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "ano_2022 = int(input(\"Digite a quantidade de vendas em 2022: \"))\n",
+        "ano_2023 = int(input(\"Digite a quantidade de vendas em 2023: \"))\n",
+        "variacao = 100 * (ano_2023 - ano_2022) / (ano_2022)\n",
+        "if variacao > 20:\n",
+        "  print(\"Bonificação para o time de vendas\")\n",
+        "elif variacao >= 2 and variacao <= 20:\n",
+        "  print(\"Pequena bonificação para o time de vendas\")\n",
+        "elif variacao < 2 and variacao >= -10:\n",
+        "  print(\"Planejamento de políticas de incentivo ás vendas\")\n",
+        "else:\n",
+        "  print(\"Corte de gastos.\")"
+      ],
+      "metadata": {
+        "id": "qsW_m1k7_ADU",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "bc3ab83c-bf59-42be-bb26-f080b3b5ae9a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite a quantidade de vendas em 2022: 1000\n",
+            "Digite a quantidade de vendas em 2023: 960\n",
+            "Planejamento de políticas de incentivo ás vendas\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
